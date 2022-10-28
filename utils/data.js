@@ -1,3 +1,5 @@
+const { Types } = require("mongoose");
+
 const names = [
   'Aaran',
   'Aaren',
@@ -109,6 +111,7 @@ const getRandomReactions = (int) => {
     results.push({
       reactionName: getRandomArrItem(appDescriptions),
       score: Math.floor(Math.random() * (99 - 70 + 1) + 70),
+     assignmentId:new Types.ObjectId()
     });
   }
   return results;
